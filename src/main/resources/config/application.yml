@@ -134,11 +134,11 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: http://localhost:9080/auth/realms/jhipster
+            issuer-uri: ${COGNITO_URL_POOL_ID}
         registration:
           oidc:
-            client-id: internal
-            client-secret: internal
+            client-id: ${INTERNAL_COGNITO_ID}
+            client-secret: ${INTERNAL_COGNITO_SECRET}
 
 server:
   servlet:
@@ -186,6 +186,7 @@ jhipster:
       audience:
         - account
         - api://default
+        - ${COGNITO_ID}
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
