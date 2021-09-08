@@ -187,6 +187,7 @@ jhipster:
         - account
         - api://default
         - ${COGNITO_ID}
+        - ${INTERNAL_COGNITO_ID}
 # ===================================================================
 # Application specific properties
 # Add your own application properties here, see the ApplicationProperties class
